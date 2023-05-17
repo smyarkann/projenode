@@ -1,0 +1,58 @@
+Tablo oluşturma
+--------------------------------------------------
+CREATE TABLE Engelli_Durum(
+Engelli_ID INT ,
+Aciklama VARCHAR(100)
+);
+
+CREATE TABLE Hesap(
+Kullanici_ID INT,
+Email VARCHAR(50),
+Sifre VARCHAR(20),
+Hesap_Acilis_Tarihi DATETIME
+);
+
+CREATE TABLE Basvuru(
+Basvuru_ID INT ,
+Kullanici_ID INT,
+Basvuru_Tarih DATETIME,
+Basvuru_Durum VARCHAR(50)
+);
+
+CREATE TABLE Kisisel_Bilgiler(
+Kimlik_No VARCHAR(15) ,
+Kullanici_ID INT,
+Engelli_ID INT,
+Ad VARCHAR(20),
+Soyad VARCHAR(20),
+Cinsiyet CHAR,
+Dogum_Tarihi DATE,
+Uyruk VARCHAR(20),
+Ikinci_Uyruk VARCHAR(20)
+);
+
+CREATE TABLE Egitim(
+Egitim_ID INT,
+Kimlik_No VARCHAR(15),
+Mezun_Durum VARCHAR(10),
+Mezun_Bolum VARCHAR(20),
+Mezun_Tarihi DATE,
+Okul_Ort FLOAT
+);
+
+CREATE TABLE Dokuman(
+Dokuman_ID INT,
+Kimlik_No VARCHAR(15),
+Dokuman_Tipi VARCHAR(250),
+Dokuman_Yukleme_Tarihi DATETIME
+);
+
+CREATE TABLE Iletisim(
+Iletisim_ID INT ,
+Kimlik_No VARCHAR(15),
+Telefon VARCHAR(11),
+Ulke VARCHAR(15),
+Sehir VARCHAR(15),
+Adres VARCHAR(25)
+);
+---------------------------------------------------
